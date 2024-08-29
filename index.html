@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasword  Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" >
+</head>
+<body>
+    <div class="container">
+        <img  id="light-mode" src="images/light.png" alt="light-mode">
+        <div class="header">
+            <img id="security-logo" src="images/logo.png" alt="Logo">
+            <h3>Password Generator</h3>
+        </div>
+        <h2>Generate a <span id="highlight">Random Password</span> </h2>
+        <p>No more weak passwords </p>
+        <div class="settings">
+            <div id="length_size">
+                <label for="length">Password Length:</label>
+                <div class="custom-number-input">
+                    <button class="decrement" onclick="decrement()">-</button>
+                    <input type="number" id="length" min="8" max="20" value="15">
+                    <button class="increment" onclick="increment()">+</button>
+                </div>
+            </div>
+            
+            <div id="password_elements">                    
+                <label class="custom-checkbox" >
+                    <input type="checkbox" id="numbers" >
+                    <span class="checkbox-checkmark" onclick="RemoveNumbers()"></span>
+                    Without numbers
+                </label>
+                <label class="custom-checkbox" >
+                    <input type="checkbox" id="symbols">
+                    <span class="checkbox-checkmark" onclick="RemoveSymbols()"></span>
+                    Without symbols
+                </label>
+            </div>
+            <button class="generator" onclick="get_password()">Generate a password</button>
+        </div>
+        
+        
+        <hr>    
+        <div class="password-section">
+            <label for="password">suggestions:</label>
+            <input type="text" id="password1" onclick="copyPassword('password1')" readonly>
+            <input type="text" id="password2" onclick="copyPassword('password2')" readonly>
+
+        </div>    
+    <script src="index.js"></script>
+</body>
+</html>

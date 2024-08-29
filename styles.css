@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+body {
+    background-color: #0d1522;
+}
+.container{
+    font-family: karla ,sans-serif ;
+    width: 800px;
+    color: aliceblue;
+    background-color: #1F2937;
+    margin: 50px auto ;
+    padding: 10px 50px ; 
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 20px #314055 ;
+    position: relative;
+}
+#light-mode{
+    display: inline;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 30px;
+    padding: 5px;
+    background: #4569a2;
+    background: radial-gradient(circle, #4569a2,#212122);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+#security-logo{
+    display: inline;
+    width: 25px;
+    margin-right: 0px;
+}
+h3{
+    
+    margin-left: 0px;
+    display: inline;
+}
+
+h2{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+#highlight{
+    display: block;
+    color: rgb(24, 173, 24);
+}
+p{
+    font-style: italic;
+    margin-bottom: 20px;
+}
+button{
+    font-family: inherit;
+    font-weight: 900;
+    font-size: medium;
+    color: antiquewhite;
+    background-color: rgb(14, 94, 14);
+    width:200px ;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.4s ease-in-out;
+}
+button:hover{
+    background-color: #17af268e;
+}
+button:active{
+    background-color: #05300a;
+}
+#password_elements{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 200px ;
+}
+hr{
+    border: 1px solid rgba(80, 80, 112, 0.719);
+}
+.password-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input[type="text"],input[type="number"]{
+    font-family: 'Roboto', sans-serif;
+    width: 150px;
+    height: 20px;
+    color: rgba(240, 248, 255, 0.437);
+    padding: 6px;
+    margin :10px;
+    background: #141629;
+    border: none;  
+    border-radius: 5px;
+    text-align: center;
+}
+input[type="number"]{
+    width: 50px;
+    color: aliceblue;
+    margin: 10px;
+}
+
+
+/* Hide default controls in modern browsers */
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.custom-number-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.custom-number-input input[type="number"] {
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+    background: #0e1123;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.custom-number-input button {
+    background-color: #2D3748;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 7px ;
+}
+
+.custom-number-input button:hover {
+    background-color: #4A5568;
+}
+
+.custom-number-input button:active {
+    background-color: #1A202C;
+}
+
+
+
+
+
+
+/* Style for custom checkboxes */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: aliceblue;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none; /* Hide default checkbox */
+}
+
+.custom-checkbox .checkbox-checkmark {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    background-color: #0e1123;
+    margin-right: 10px;
+    position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-checkmark {
+    border-color:rgb(49, 78, 184);/* Border color when checked */
+}
+
+.custom-checkbox .checkbox-checkmark::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(24, 173, 24); 
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-checkmark::after {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* the dark mode is already setted and this is the style for the light mode */
+/* for the background and the text color */
+.light-container {
+    color: rgb(51, 51, 51);
+    background-color: rgb(144, 168, 196);
+}
+
+.light-container #security-logo {
+    filter: invert(0.2);
+}
+
+.light-container #light-mode {
+    background: radial-gradient(circle,#2121224d,#4569a251);
+}
+
+.light-container .custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: rgb(21, 23, 23);
+}
+
+.light-container .custom-checkbox .checkbox-checkmark {
+    border: 2px solid #0e11235b;
+    background-color: rgb(141, 163, 187);
+}
+.light-container input[type="text"],.light-container input[type="number"]{
+    background: rgba(101, 101, 101, 0.304);
+    color:#151825;
+}
+
+.light-container input[type="number"]{
+    color:#0e1123;
+}
+
+.light-container .custom-number-input input[type="number"] {
+    background: #0e11232f;
+    color: #0e1123;
+}
+
+
+@media screen and (max-width:600px ) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    #light-mode{
+        width: 25px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    button {
+        font-size: 16px;
+        width: 100%;
+    }
+    #password_elements{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 10px;
+        padding: 5px;
+    }
+    .custom-checkbox {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        font-size: 14px;
+    }
+    .custom-number-input button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .password-section 
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;{
+    }
+    
+}
+
+
